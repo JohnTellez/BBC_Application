@@ -117,6 +117,13 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr button_background
+attr button_bottom_padding
+attr button_image_disabled
+attr button_image_enabled
+attr button_left_padding
+attr button_right_padding
+attr button_top_padding
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -286,6 +293,14 @@ attr iconifiedByDefault
 attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
+attr inner_text
+attr inner_text_background
+attr inner_text_bottom_padding
+attr inner_text_color
+attr inner_text_left_padding
+attr inner_text_right_padding
+attr inner_text_size
+attr inner_text_top_padding
 attr insetForeground
 attr isLightTheme
 attr itemBackground
@@ -1015,6 +1030,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable bbcbg
 drawable bbcbg_2
+drawable boton_redondo
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -1026,8 +1042,12 @@ drawable facebook_button_bg
 drawable facebookbox
 drawable google_account_bg
 drawable googlebox
+drawable ic_home_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_local_movies_black_24dp
+drawable ic_lock_open_black_24dp
+drawable ic_lock_outline_black_24dp
 drawable ic_menu_camera
 drawable ic_menu_gallery
 drawable ic_menu_manage
@@ -1037,6 +1057,9 @@ drawable ic_menu_slideshow
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_notifications_black_24dp
+drawable ic_photo_library_black_24dp
+drawable ic_settings_black_24dp
 drawable logobbc
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
@@ -1056,7 +1079,11 @@ drawable notify_panel_notification_icon_bg
 drawable other_acc_button_bg
 drawable profile
 drawable registrar_acc_button
+drawable shape_button
+drawable shape_rounded
 drawable side_nav_bar
+drawable splash
+drawable splash2
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -1067,7 +1094,6 @@ id GoogleLoginBtn
 id LogoBBC
 id LogoBBC_login
 id META
-id RegistrarLoginBtn
 id SHIFT
 id SYM
 id action0
@@ -1260,6 +1286,7 @@ id status_bar_latest_event_content
 id stretch
 id submenuarrow
 id submit_area
+id swipe_btn
 id tabMode
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -2030,6 +2057,7 @@ styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
+styleable SwipeButton button_background button_bottom_padding button_image_disabled button_image_enabled button_left_padding button_right_padding button_top_padding inner_text inner_text_background inner_text_bottom_padding inner_text_color inner_text_left_padding inner_text_right_padding inner_text_size inner_text_top_padding
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable TabItem android_icon android_layout android_text
 styleable TabLayout tabBackground tabContentStart tabGravity tabIconTint tabIconTintMode tabIndicator tabIndicatorAnimationDuration tabIndicatorColor tabIndicatorFullWidth tabIndicatorGravity tabIndicatorHeight tabInlineLabel tabMaxWidth tabMinWidth tabMode tabPadding tabPaddingBottom tabPaddingEnd tabPaddingStart tabPaddingTop tabRippleColor tabSelectedTextColor tabTextAppearance tabTextColor tabUnboundedRipple

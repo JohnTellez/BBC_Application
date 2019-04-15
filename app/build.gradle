@@ -30,5 +30,6 @@ dependencies {
     implementation 'com.android.volley:volley:1.1.0'
     implementation 'com.github.bumptech.glide:glide:3.7.0' // biblioteca de carga de imagenes mejor que picasso
     implementation 'de.hdodenhof:circleimageview:2.1.0' // biblioteca para el ImageView circular incluyendo bordes
+    implementation 'com.ebanx:swipe-button:0.4.0'
 
 }
