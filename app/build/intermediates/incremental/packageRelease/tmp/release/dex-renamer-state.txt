@@ -1,4 +1,0 @@
-#Fri Apr 12 16:57:35 COT 2019
-base.0=C\:\\Users\\Inner\\Desktop\\MyApplication\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
-path.0=classes.dex
-renamed.0=classes.dex

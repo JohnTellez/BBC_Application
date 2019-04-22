@@ -4,7 +4,205 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/splash"
+    android:background="@drawable/splash2"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
-    tools:showIn="@layout/app_bar_main" />
+    tools:showIn="@layout/app_bar_main">
+
+    <ImageView
+        android:id="@+id/imageViewcatalogo"
+        android:layout_width="421dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/viewBg" />
+
+    <TextView
+        android:id="@+id/textViewcatalogo"
+        android:layout_width="214dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/spark_image_tint"
+        android:paddingTop="8dp"
+        android:text="CATALOGO DE PRODUCTOS"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewcatalogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo" />
+
+    <com.varunest.sparkbutton.SparkButton
+
+
+        android:id="@+id/catalogobtn"
+        android:layout_width="632dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewcatalogo"
+        app:layout_constraintEnd_toStartOf="@+id/textViewcatalogo"
+        app:layout_constraintStart_toStartOf="@+id/imageViewcatalogo"
+        app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo"
+        app:sparkbutton_activeImage="@drawable/bbccaja6"
+        app:sparkbutton_iconSize="100dp"
+        app:sparkbutton_inActiveImage="@drawable/bbccaja6"
+        app:sparkbutton_primaryColor="@color/spark_primary_color"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+        tools:ignore="MissingConstraints">
+
+    </com.varunest.sparkbutton.SparkButton>
+
+    <ImageView
+        android:id="@+id/imageViewcupons"
+        android:layout_width="421dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewcatalogo"
+        app:srcCompat="@color/viewBg" />
+
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/cuponbtn"
+        android:layout_width="636dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewcupons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toEndOf="@+id/textViewcupon"
+        app:layout_constraintTop_toTopOf="@+id/imageViewcupons"
+        app:sparkbutton_activeImage="@drawable/descuento_50"
+        app:sparkbutton_iconSize="100dp"
+        app:sparkbutton_inActiveImage="@drawable/descuento_50"
+        app:sparkbutton_primaryColor="@color/spark_primary_color"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+        tools:ignore="MissingConstraints">
+
+    </com.varunest.sparkbutton.SparkButton>
+
+    <TextView
+        android:id="@+id/textViewcupon"
+        android:layout_width="214dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="20dp"
+        android:background="@color/spark_image_tint"
+        android:paddingTop="16dp"
+        android:text="OFERTAS Y CUPONES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewcupons"
+        app:layout_constraintStart_toStartOf="@+id/imageViewcupons"
+        app:layout_constraintTop_toTopOf="@+id/imageViewcupons" />
+
+    <ImageView
+        android:id="@+id/imageViewsouvenir"
+        android:layout_width="421dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewgps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewcupons"
+        app:layout_constraintVertical_bias="0.027"
+        app:srcCompat="@color/viewBg" />
+
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/souvenirbtn"
+        android:layout_width="628dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewsouvenir"
+        app:layout_constraintEnd_toStartOf="@+id/textViewsouvenir"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewsouvenir"
+        app:layout_constraintVertical_bias="1.0"
+        app:sparkbutton_activeImage="@drawable/gorrabud"
+        app:sparkbutton_iconSize="100dp"
+        app:sparkbutton_inActiveImage="@drawable/gorrabud"
+        app:sparkbutton_primaryColor="@color/spark_primary_color"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewsouvenir"
+        android:layout_width="214dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/spark_image_tint"
+        android:paddingTop="16dp"
+        android:text="MERCHANDISING"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionMode.Title"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewsouvenir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewsouvenir" />
+
+    <ImageView
+        android:id="@+id/imageViewgps"
+        android:layout_width="421dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="392dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo"
+        app:srcCompat="@color/viewBg" />
+
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/gpsbtn"
+        android:layout_width="653dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="256dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewgps"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewgps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewgps"
+        app:layout_constraintVertical_bias="0.363"
+        app:sparkbutton_activeImage="@drawable/gps"
+        app:sparkbutton_iconSize="100dp"
+        app:sparkbutton_inActiveImage="@drawable/gps"
+        app:sparkbutton_primaryColor="@color/spark_primary_color"
+        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+        tools:ignore="MissingConstraints">
+
+    </com.varunest.sparkbutton.SparkButton>
+
+    <TextView
+        android:id="@+id/textViewgps"
+        android:layout_width="214dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/spark_image_tint"
+        android:paddingTop="16dp"
+        android:text="ESTABLECIMIENTOS"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewgps"
+        app:layout_constraintEnd_toStartOf="@+id/gpsbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageViewgps"
+        app:layout_constraintTop_toTopOf="@+id/imageViewgps"
+        app:layout_constraintVertical_bias="0.555" />
+
+
+</android.support.constraint.ConstraintLayout>
