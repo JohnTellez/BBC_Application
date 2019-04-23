@@ -16,16 +16,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.myapplication.Conexion;
 import com.bumptech.glide.Glide;
-import com.example.myapplication.Usuario;
+
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private int ident;
-    private Usuario user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,13 +34,13 @@ public class MainActivity extends AppCompatActivity
 
         try{
             Bundle bundle = getIntent().getExtras();
-            user = bundle.getParcelable("DATA_USER");
+            Usuario user = bundle.getParcelable("DATA_USER");
             if(bundle!=null){
-                ident = user.getId();
+                int ident = user.getId();
                 ((TextView) header.findViewById(R.id.txtNombreUsuario)).setText(user.getNombre());
                 ((TextView) header.findViewById(R.id.txtEmailUsuario)).setText(user.getEmail());
                 if(!user.getFoto().equals("sin imagen")){
-                    String url_image = Conexion.URL_WEB_SERVICE +user.getFoto();
+                    String url_image = Conexion.URL_WEB_SERVICE + user.getFoto();
                     url_image = url_image.replace(" ","%20");
                     try {
                         Log.i("RESPUESTA IMAGEN: ",""+url_image);
@@ -117,6 +113,7 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+
         } else if (id == R.id.nav_gallery) {
 
             switch (id) {
@@ -125,10 +122,13 @@ public class MainActivity extends AppCompatActivity
                 }
             }
 
-
-
-
         } else if (id == R.id.nav_slideshow) {
+
+            switch (id) {
+                case R.id.nav_slideshow: {
+                    startActivity(new Intent(MainActivity.this, Catalogo.class));
+                }
+            }
 
         } else if (id == R.id.nav_manage) {
 

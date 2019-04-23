@@ -1096,6 +1096,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable okicon
 drawable other_acc_button_bg
 drawable profile
 drawable registrar_acc_button
@@ -1202,6 +1203,7 @@ id fill_horizontal
 id fill_vertical
 id filled
 id fixed
+id floatingBtnBack
 id forever
 id fotoUsuario
 id ghost_view
@@ -1422,6 +1424,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_catalogo
 layout activity_inicio
 layout activity_login
 layout activity_main
