@@ -23,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.spark.submitbutton.SubmitButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,9 +33,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.myapplication.Conexion;
-import com.example.myapplication.Usuario;
-
 
 public class Registrar extends AppCompatActivity{
 
@@ -43,7 +41,6 @@ public class Registrar extends AppCompatActivity{
     private TextInputEditText password;
     private TextInputEditText nombre;
     private TextInputEditText email;
-    private Button btnRegistrar;
     private int request_code = 1;
     private Bitmap bitmap;
     private ProgressDialog progreso;
@@ -60,7 +57,8 @@ public class Registrar extends AppCompatActivity{
         email = (TextInputEditText)findViewById(R.id.correo_registro);
         password = (TextInputEditText)findViewById(R.id.password_registro);
         nombre = (TextInputEditText)findViewById(R.id.nombre_registro);
-        btnRegistrar = (Button)findViewById(R.id.btn_registro_usuario);
+        SubmitButton btnRegistrar = (SubmitButton) findViewById(R.id.btn_registro_usuario);
+
 
         requestQueue = Volley.newRequestQueue(this);
 

@@ -482,6 +482,11 @@ attr statusBarScrim
 attr strokeColor
 attr strokeWidth
 attr subMenuArrow
+attr sub_btn_background
+attr sub_btn_duration
+attr sub_btn_line_color
+attr sub_btn_ripple_color
+attr sub_btn_tick_color
 attr submitBackground
 attr subtitle
 attr subtitleTextAppearance
@@ -623,6 +628,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -660,6 +666,8 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -720,6 +728,10 @@ color secondary_text_disabled_material_light
 color spark_image_tint
 color spark_primary_color
 color spark_secondary_color
+color sub_btn_background
+color sub_btn_line
+color sub_btn_ripple
+color sub_btn_tick
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -729,6 +741,8 @@ color switch_thumb_normal_material_light
 color tooltip_background_dark
 color tooltip_background_light
 color viewBg
+color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1055,6 +1069,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable eyeiconpassw
 drawable facebook
 drawable facebook_button_bg
 drawable facebookbox
@@ -2107,6 +2122,7 @@ styleable SnackbarLayout android_maxWidth elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
 styleable StateListDrawable android_dither android_visible android_variablePadding android_constantSize android_enterFadeDuration android_exitFadeDuration
 styleable StateListDrawableItem android_drawable
+styleable SubmitButton sub_btn_background sub_btn_duration sub_btn_line_color sub_btn_ripple_color sub_btn_tick_color
 styleable SwipeButton button_background button_bottom_padding button_image_disabled button_image_enabled button_left_padding button_right_padding button_top_padding inner_text inner_text_background inner_text_bottom_padding inner_text_color inner_text_left_padding inner_text_right_padding inner_text_size inner_text_top_padding
 styleable SwitchCompat android_textOn android_textOff android_thumb showText splitTrack switchMinWidth switchPadding switchTextAppearance thumbTextPadding thumbTint thumbTintMode track trackTint trackTintMode
 styleable TabItem android_icon android_layout android_text

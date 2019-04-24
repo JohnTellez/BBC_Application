@@ -5,6 +5,7 @@
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorAccent_r">#FF4081</color>
     <color name="viewBg">#46FFFFFE</color>
+    <color name="green">#32CD32</color>
 
 
 </resources>

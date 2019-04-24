@@ -41,6 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:hint="Password"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorAccent"
+        app:passwordToggleDrawable="@android:drawable/ic_menu_view"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,23 +61,26 @@
             android:textStyle="bold" />
     </android.support.design.widget.TextInputLayout>
 
-    <Button
+    <com.spark.submitbutton.SubmitButton
         android:id="@+id/btn_acceder"
-        android:layout_width="340dp"
-        android:layout_height="58dp"
+        android:layout_width="328dp"
+        android:layout_height="52dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/facebook_button_bg"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:onClick="ingresar"
-        android:text="ACCEDER"
-        android:textColor="@android:color/white"
+        android:text="INICIAR SESIÓN"
+        android:textColor="@android:color/background_light"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        tools:ignore="OnClick" />
+        app:sub_btn_background="@color/colorPrimary"
+        app:sub_btn_duration="1000"
+        app:sub_btn_line_color="@color/colorPrimary"
+        app:sub_btn_ripple_color="@color/green"
+        app:sub_btn_tick_color="@color/white" />
 
     <TextView
         android:id="@+id/signup"

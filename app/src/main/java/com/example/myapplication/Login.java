@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.myapplication.Usuario;
+import com.spark.submitbutton.SubmitButton;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,8 +30,6 @@ import java.util.Map;
 
 public class Login extends AppCompatActivity {
 
-    private Button acceder;
-    private TextView registrar;
     private TextInputEditText email;
     private TextInputEditText password;
     private ProgressDialog progreso;
@@ -44,8 +43,8 @@ public class Login extends AppCompatActivity {
 
         email = (TextInputEditText)findViewById(R.id.etusuario);
         password = (TextInputEditText)findViewById(R.id.etpass);
-        acceder = (Button)findViewById(R.id.btn_acceder);
-        registrar = (TextView)findViewById(R.id.signup);
+        SubmitButton acceder = (SubmitButton) findViewById(R.id.btn_acceder);
+        TextView registrar = (TextView) findViewById(R.id.signup);
         requestQueue = Volley.newRequestQueue(this);
 
         registrar.setOnClickListener(new View.OnClickListener() {

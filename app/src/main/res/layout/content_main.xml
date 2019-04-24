@@ -9,7 +9,8 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <ImageView
+
+ <ImageView
         android:id="@+id/imageViewcatalogo"
         android:layout_width="421dp"
         android:layout_height="120dp"
@@ -21,7 +22,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@color/viewBg" />
 
-    <TextView
+   <com.varunest.sparkbutton.SparkButton
+
+       android:id="@+id/catalogobtn"
+       android:layout_width="628dp"
+       android:layout_height="128dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginEnd="8dp"
+       app:layout_constraintBottom_toBottomOf="@+id/imageViewcatalogo"
+       app:layout_constraintEnd_toStartOf="@+id/imageViewcatalogo"
+       app:layout_constraintHorizontal_bias="0.344"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo"
+       app:layout_constraintVertical_bias="1.0"
+       app:sparkbutton_activeImage="@drawable/bbccaja6"
+       app:sparkbutton_iconSize="100dp"
+       app:sparkbutton_inActiveImage="@drawable/bbccaja6"
+       app:sparkbutton_primaryColor="@color/spark_primary_color"
+       app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
+       tools:ignore="MissingConstraints">
+
+   </com.varunest.sparkbutton.SparkButton>
+
+   <TextView
         android:id="@+id/textViewcatalogo"
         android:layout_width="214dp"
         android:layout_height="66dp"
@@ -37,28 +60,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo" />
 
-    <com.varunest.sparkbutton.SparkButton
 
-
-        android:id="@+id/catalogobtn"
-        android:layout_width="632dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageViewcatalogo"
-        app:layout_constraintEnd_toStartOf="@+id/textViewcatalogo"
-        app:layout_constraintStart_toStartOf="@+id/imageViewcatalogo"
-        app:layout_constraintTop_toTopOf="@+id/imageViewcatalogo"
-        app:sparkbutton_activeImage="@drawable/bbccaja6"
-        app:sparkbutton_iconSize="100dp"
-        app:sparkbutton_inActiveImage="@drawable/bbccaja6"
-        app:sparkbutton_primaryColor="@color/spark_primary_color"
-        app:sparkbutton_secondaryColor="@color/colorPrimaryDark"
-        tools:ignore="MissingConstraints">
-
-    </com.varunest.sparkbutton.SparkButton>
-
-    <ImageView
+   <ImageView
         android:id="@+id/imageViewcupons"
         android:layout_width="421dp"
         android:layout_height="120dp"
