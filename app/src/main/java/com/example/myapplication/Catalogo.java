@@ -1,152 +1,105 @@
 package com.example.myapplication;
 
-import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import cz.msebera.android.httpclient.Header;
+import java.util.List;
 
 public class Catalogo extends AppCompatActivity {
 
-    public ListView lvDatos;
-    private AsyncHttpClient cliente;
+
+    //this is the JSON Data URL
+    //make sure you are using the correct ip else it will not work
+    private static final String URL_PRODUCTS = "https://myappmovilbbc.000webhostapp.com/NavigationDrawer/Api.php";
+
+    //a list to store all the products
+    List<Product> productList;
+
+    //the recyclerview
+    RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catalogo);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.floatingBtnBack);
-        fab.setOnClickListener(new View.OnClickListener() {
-                                   @Override
-                                   public void onClick(View view) {
-                                       startActivity(new Intent(Catalogo.this, MainActivity.class));
-                                                                          }
-                               });
+        //getting the recyclerview from xml
+        recyclerView = findViewById(R.id.recylcerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        lvDatos = (ListView) findViewById(R.id.lvDatos);
-        cliente = new AsyncHttpClient();
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        obtenerProductos();
+        //initializing the productlist
+        productList = new ArrayList<>();
 
+        //this method will fetch and parse json
+        //to display it in recyclerview
+        loadProducts();
     }
 
-    private void obtenerProductos(){
+    private void loadProducts() {
 
-        String url = "https://myappmovilbbc.000webhostapp.com/NavigationDrawer/obtenerDatos.php";
+        /*
+         * Creating a String Request
+         * The request type is GET defined by first parameter
+         * The URL is defined in the second parameter
+         * Then we have a Response Listener and a Error Listener
+         * In response listener we will get the JSON response as a String
+         * */
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_PRODUCTS,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            //converting the string to json array object
+                            JSONArray array = new JSONArray(response);
 
-        cliente.post(url, new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
+                            //traversing through all the object
+                            for (int i = 0; i < array.length(); i++) {
 
-                if(statusCode == 200) {
-                    listarProductos(new String(responseBody));
-                }
-            }
+                                //getting product object from json array
+                                JSONObject product = array.getJSONObject(i);
 
-            @Override
-            public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
-            }
-        });
-
-    }
-
-    private void listarProductos (String respuesta){
-
-        final ArrayList<Producto> lista = new ArrayList<Producto>();
-        try {
-            JSONArray jsonArreglo = new JSONArray(respuesta);
-
-            for (int i=0; i<jsonArreglo.length();i++){
-                Producto p = new Producto();
-                p.setId((jsonArreglo.getJSONObject(i).getInt("id_pro")));
-                p.setNombre((jsonArreglo.getJSONObject(i).getString("nom_pro")));
-                p.setPrecio((jsonArreglo.getJSONObject(i).getInt("pre_pro")));
-                p.setCantidad((jsonArreglo.getJSONObject(i).getInt("can_pro")));
-                p.setTotal((jsonArreglo.getJSONObject(i).getInt("tot_pro")));
-                lista.add(p);
-
-            }
-            ArrayAdapter <Producto> a = new ArrayAdapter (this,android.R.layout.simple_list_item_1,lista);
-            lvDatos.setAdapter(a);
-
-            lvDatos.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-                @Override
-                public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-
-                    Producto p = lista.get(position);
-                    String url = "https://myappmovilbbc.000webhostapp.com/NavigationDrawer/eliminar.php?id="+p.getId();
-
-                    cliente.post(url, new AsyncHttpResponseHandler() {
-
-                        @Override
-                        public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
-
-                            if (statusCode == 200) {
-                                Toast.makeText(Catalogo.this, "Producto eliminado correctamente!!", Toast.LENGTH_SHORT).show();
-                                try {
-                                    Thread.sleep(2000);
-                                } catch (InterruptedException e) {
-                                    e.printStackTrace();
-                                }
-                                obtenerProductos();
+                                //adding the product to product list
+                                productList.add(new Product(
+                                        product.getInt("id"),
+                                        product.getString("title"),
+                                        product.getString("shortdesc"),
+                                        product.getDouble("rating"),
+                                        product.getDouble("price"),
+                                        product.getString("image")
+                                ));
                             }
+
+                            //creating adapter object and setting it to recyclerview
+                            ProductAdapter adapter = new ProductAdapter(Catalogo.this, productList);
+                            recyclerView.setAdapter(adapter);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-                        @Override
-                        public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
+                    }
+                });
 
-                        }
-                    });
-
-                    return true;
-
-                }
-            });
-
-            lvDatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                    Producto p = lista.get(position);
-                    StringBuffer b = new StringBuffer();
-                    b.append("ID: " + p.getId() + "\n");
-                    b.append("NOMBRE: " + p.getNombre() + "\n");
-                    b.append("PRECIO: $" + p.getPrecio() + "\n");
-                    b.append("CANTIDAD: " + p.getCantidad() + "\n");
-                    b.append("TOTAL: $" + p.getTotal());
-
-                    AlertDialog.Builder a = new AlertDialog.Builder(Catalogo.this);
-                    a.setCancelable(true);
-                    a.setTitle("Detalle");
-                    a.setMessage(b.toString());
-                    a.setIcon(R.drawable.okicon);
-                    a.show();
-               }
-            });
-
-
-        } catch (Exception e1) {
-
-            e1.printStackTrace();
-        }
-
+        //adding our stringrequest to queue
+        Volley.newRequestQueue(this).add(stringRequest);
     }
-
-
 }

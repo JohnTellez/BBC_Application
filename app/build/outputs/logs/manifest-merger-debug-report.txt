@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\c35a16424c5ab3d7b80611393a60642d\AndroidManifest.xml:17:1-24:12
 MERGED from [com.ebanx:swipe-button:0.4.0] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\7399c82ebf2b8c90cda072fc0e57bb9c\AndroidManifest.xml:2:1-17:12
 MERGED from [com.github.varunest:sparkbutton:1.0.6] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\3685a40760d6b253bb8c1e730896965b\AndroidManifest.xml:2:1-17:12
@@ -42,20 +42,20 @@ MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Inner\.gradle\cac
 MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\95e4238fde30a77e9ed77310a8fde4a0\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\7e028ddfcb630124c984f0d2f41f3a79\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\928726182ddb61dc8a9e3811add0acb0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
-INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
+INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
 	package
 		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:3:5-40
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-40:12
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:1-49:12
 		INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:2:11-69
@@ -72,7 +72,7 @@ ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml
 	android:name
 		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:7:22-73
 application
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:9:5-38:19
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:9:5-47:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\c35a16424c5ab3d7b80611393a60642d\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\c35a16424c5ab3d7b80611393a60642d\AndroidManifest.xml:22:5-20
 MERGED from [com.ebanx:swipe-button:0.4.0] C:\Users\Inner\.gradle\caches\transforms-2\files-2.1\7399c82ebf2b8c90cda072fc0e57bb9c\AndroidManifest.xml:11:5-15:19
@@ -107,50 +107,56 @@ MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Inner\.gra
 		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:16:9-40
 	android:networkSecurityConfig
 		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:13:9-69
-activity#com.example.myapplication.Catalogo
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:17:9-46
-	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:17:19-43
-activity#com.example.myapplication.Registrar_pro
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:18:9-51
-	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:18:19-48
-activity#com.example.myapplication.MainActivity
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:19:9-22:59
-	android:label
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:21:13-45
+activity#com.example.myapplication.SplashActivity
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:17:9-25:20
 	android:theme
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:22:13-56
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:19:13-63
 	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:20:13-41
-activity#com.example.myapplication.Registrar
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:23:9-25:52
-	android:theme
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:25:13-49
-	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:24:13-38
-activity#com.example.myapplication.Login
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:26:9-28:52
-	android:theme
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:28:13-49
-	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:27:13-34
-activity#com.example.myapplication.Inicio
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:29:9-37:20
-	android:label
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:31:13-40
-	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:30:13-35
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:18:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:32:13-36:29
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:20:13-24:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:33:17-69
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:21:17-69
 	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:21:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:35:17-77
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:35:27-74
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:23:27-74
+activity#com.example.myapplication.Catalogo
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:26:9-46
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:26:19-43
+activity#com.example.myapplication.Registrar_pro
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:27:9-51
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:27:19-48
+activity#com.example.myapplication.MainActivity
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:28:9-31:59
+	android:label
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:30:13-45
+	android:theme
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:31:13-56
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:29:13-41
+activity#com.example.myapplication.Registrar
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:32:9-34:52
+	android:theme
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:34:13-49
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:33:13-38
+activity#com.example.myapplication.Login
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:35:9-37:52
+	android:theme
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:37:13-49
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:36:13-34
+activity#com.example.myapplication.Inicio
+ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:38:9-46:20
+	android:label
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:40:13-40
+	android:name
+		ADDED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml:39:13-35
 uses-sdk
 INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Inner\Desktop\MyApplication\app\src\main\AndroidManifest.xml

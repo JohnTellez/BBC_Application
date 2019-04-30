@@ -11,7 +11,7 @@ import cz.msebera.android.httpclient.Header;
 
 public class Registrar_pro extends AppCompatActivity {
 
-    private TextInputEditText etNombre, etPrecio, etCantidad;
+    private TextInputEditText etNombre, etDescripcion, etCalificacion, etPrecio, etImagen ;
     private Button btnAlmacenar;
     private AsyncHttpClient cliente;
 
@@ -24,12 +24,16 @@ public class Registrar_pro extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_pro);
 
         etNombre = (TextInputEditText) findViewById(R.id.etNombre);
+        etDescripcion = (TextInputEditText) findViewById(R.id.etDescripcion);
+        etCalificacion = (TextInputEditText) findViewById(R.id.etCalificacion);
         etPrecio = (TextInputEditText) findViewById(R.id.etPrecio);
-        etCantidad = (TextInputEditText) findViewById(R.id.etCantidad);
+        etImagen = (TextInputEditText) findViewById(R.id.etImagen);
+
         btnAlmacenar = (Button) findViewById(R.id.btnAlmacenar);
 
 
         cliente = new AsyncHttpClient();
+
         botonAlmacenar();
 
 
@@ -41,15 +45,19 @@ public class Registrar_pro extends AppCompatActivity {
         btnAlmacenar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (etNombre.getText().toString().isEmpty() || etPrecio.getText().toString().isEmpty() || etCantidad.getText().toString().isEmpty()) {
+                if (etNombre.getText().toString().isEmpty() || etDescripcion.getText().toString().isEmpty() || etCalificacion.getText().toString().isEmpty() ||
+                        etPrecio.getText().toString().isEmpty() || etImagen.getText().toString().isEmpty() ) {
                     Toast.makeText(Registrar_pro.this, "Hay campos vacios!!", Toast.LENGTH_SHORT).show();
 
                 } else {
                     Producto p = new Producto();
                     p.setNombre(etNombre.getText().toString().replaceAll(" ", "%20"));
+                    p.setDescripcion(etDescripcion.getText().toString().replaceAll(" ", "%20"));
+                    p.setCalificacion(Integer.parseInt(etCalificacion.getText().toString()));
                     p.setPrecio(Integer.parseInt(etPrecio.getText().toString()));
-                    p.setCantidad(Integer.parseInt(etCantidad.getText().toString()));
-                    p.setTotal(p.getPrecio() * p.getCantidad());
+                    p.setImagen(etImagen.getText().toString());
+
+                    //p.setTotal(p.getPrecio() * p.getCantidad());
                     agregarProducto(p);
                     try {
                         Thread.sleep(2000);
@@ -67,8 +75,10 @@ public class Registrar_pro extends AppCompatActivity {
 
     private void agregarProducto(Producto p) {
 
-        String url = "https://myappmovilbbc.000webhostapp.com/NavigationDrawer/agregar.php?";
-        String parametros = "Nombre="+p.getNombre()+"&Precio="+p.getPrecio()+"&Cantidad="+p.getCantidad()+"&Total="+p.getTotal();
+        String url = "https://myappmovilbbc.000webhostapp.com/NavigationDrawer/agregar_prod.php?";
+        String parametros = "Nombre="+p.getNombre()+"&Descripcion="+p.getDescripcion()+"&Calificacion="+p.getCalificacion()
+                +"&Precio="+p.getPrecio()+"&Imagen="+p.getImagen();
+        //String parametros = "Nombre="+p.getNombre()+"&Precio="+p.getPrecio()+"&Cantidad="+p.getCantidad()+"&Total="+p.getTotal();
         cliente.post(url + parametros, new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
@@ -76,8 +86,10 @@ public class Registrar_pro extends AppCompatActivity {
                 if (statusCode == 200){
                     Toast.makeText(Registrar_pro.this, "Producto agregado correctamente!!", Toast.LENGTH_SHORT).show();
                     etNombre.setText("");
+                    etDescripcion.setText("");
+                    etImagen.setText("");
                     etPrecio.setText("");
-                    etCantidad.setText("");
+                    etCalificacion.setText("");
                 }
 
             }
@@ -91,7 +103,7 @@ public class Registrar_pro extends AppCompatActivity {
 
     }
 
-    // Obtener y listar los productos
+
 
 
 

@@ -2,21 +2,29 @@ package com.example.myapplication;
 
 public class Producto {
 
-    private int id;
+    private  int id;
     private  String nombre;
+    private  String descripcion;
     private  int precio;
-    private  int cantidad;
-    private  int total;
+    private  int calificacion;
+    private  String imagen;
 
-    public Producto() {
-    }
+ //public Producto(int id, String nombre, int precio, int cantidad, String imagen, String descripcion) {
 
-    public Producto(int id, String nombre, int precio, int cantidad, int total) {
+
+    public Producto(int id, String nombre, int precio, int calificacion, String imagen, String descripcion) {
+
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.cantidad = cantidad;
-        this.total = total;
+        this.calificacion = calificacion;
+        this.imagen = imagen;
+        this.descripcion = descripcion;
+
+    }
+
+    public Producto() {
+
     }
 
     public int getId() {
@@ -43,20 +51,30 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getCalificacion() {
+        return calificacion;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
     }
 
-    public int getTotal() {
-        return total;
+
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setTotal(int total) {
-        this.total = total;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 
     @Override

@@ -18,8 +18,8 @@
             android:title="Consultar Producto" />
         <item
             android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Eliminar Producto" />
+            android:icon="@android:drawable/ic_lock_idle_lock"
+            android:title="Iniciar sesion" />
     </group>
 
     <item android:title="Communicate">

@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity
 
             switch (id) {
                 case R.id.nav_manage: {
-                    startActivity(new Intent(MainActivity.this, Catalogo.class));
+                    startActivity(new Intent(MainActivity.this, Inicio.class));
                 }
             }
 
