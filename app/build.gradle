@@ -36,5 +36,7 @@ dependencies {
     implementation 'com.github.varunest:sparkbutton:1.0.6'
     implementation 'com.loopj.android:android-async-http:1.4.9'
     implementation 'me.spark:submitbutton:1.0.1'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
 
 }

@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#7EF8F8F8"
+        android:background="@drawable/side_nav_bar2"
         android:padding="8dp">
 
         <ImageView

@@ -33,4 +33,6 @@ public class SplashActivity extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this,R.anim.mysplashanimation);
         logo.startAnimation(myanim);
     }
+
+ 
 }

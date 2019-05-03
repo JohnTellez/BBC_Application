@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.myapplication.Conexion;
 import com.android.volley.AuthFailureError;
@@ -64,6 +65,16 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+    // Implementacion volver en layout
+    // Inicio
+    private void setSupportActionBar (Toolbar toolbar) {
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    //Fin
 
     private void iniciar() {
 

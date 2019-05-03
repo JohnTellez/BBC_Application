@@ -28,6 +28,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+animator scale_with_alpha
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -157,6 +158,15 @@ attr chipStartPadding
 attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
+attr ci_animator
+attr ci_animator_reverse
+attr ci_drawable
+attr ci_drawable_unselected
+attr ci_gravity
+attr ci_height
+attr ci_margin
+attr ci_orientation
+attr ci_width
 attr civ_border_color
 attr civ_border_overlay
 attr civ_border_width
@@ -1056,13 +1066,24 @@ drawable abc_vector_test
 drawable accountoutline
 drawable avd_hide_password
 drawable avd_show_password
+drawable bbc1
+drawable bbc2
+drawable bbc3
+drawable bbc4
+drawable bbc5
+drawable bbc6
+drawable bbc7
 drawable bbcbg
 drawable bbcbg_2
 drawable bbccaja6
 drawable bbccaja6_press
 drawable bg_circle
 drawable boton_redondo
+drawable calificacionprod
+drawable catalogo
+drawable cupones
 drawable cupones_promocionales_420x350
+drawable descripprod
 drawable descuento50
 drawable descuento_50
 drawable design_bottom_navigation_item_background
@@ -1097,12 +1118,15 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_photo_library_black_24dp
 drawable ic_settings_black_24dp
+drawable iniciarsesion
 drawable logobbc
 drawable logobbc2
 drawable logobbc3
+drawable merchandising
 drawable mtrl_snackbar_background
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable nombreprod24
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1117,17 +1141,24 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable okicon
 drawable other_acc_button_bg
+drawable precioprod
 drawable profile
 drawable registrar_acc_button
+drawable registrar_producto
 drawable shape_button
 drawable shape_rounded
 drawable side_nav_bar
+drawable side_nav_bar2
+drawable sobrelaapp
 drawable splash
 drawable splash2
+drawable sucursales
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable transparent_bg_bordered
 drawable transparent_bg_bordered_button
+drawable urlprod
+drawable white_radius
 id ALT
 id CTRL
 id FUNCTION
@@ -1169,7 +1200,7 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btnAlmacenar
+id btnAlmacenar2
 id btn_acceder
 id btn_registro_usuario
 id buttonPanel
@@ -1218,7 +1249,6 @@ id etusuario
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id fab
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1237,6 +1267,7 @@ id guideline3
 id guideline4
 id home
 id homeAsUp
+id horizontal
 id icon
 id icon_group
 id ifRoom
@@ -1246,6 +1277,7 @@ id imageViewcatalogo
 id imageViewcupons
 id imageViewgps
 id imageViewsouvenir
+id indicator
 id info
 id invisible
 id italic
@@ -1270,12 +1302,14 @@ id mini
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
-id nav_camera
-id nav_gallery
-id nav_manage
-id nav_send
-id nav_share
-id nav_slideshow
+id nav_about
+id nav_catalogo
+id nav_cupones
+id nav_iniciarsesion
+id nav_inicio
+id nav_merchan
+id nav_reg_prod
+id nav_sucursales
 id nav_view
 id navigation_header_container
 id never
@@ -1287,6 +1321,7 @@ id notification_main_column
 id notification_main_column_container
 id outline
 id packed
+id pager
 id parallax
 id parent
 id parentPanel
@@ -1298,6 +1333,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id recylcerView
+id relativeLayout
 id right
 id right_icon
 id right_side
@@ -1400,6 +1436,7 @@ id useLogo
 id usuario_imagen_registro
 id vCircle
 id vDotsView
+id vertical
 id view_offset_helper
 id visible
 id withText
@@ -1498,6 +1535,7 @@ layout product_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout slide
 layout support_simple_spinner_dropdown_item
 menu activity_main_drawer
 menu main
@@ -2098,6 +2136,7 @@ styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCo
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
 styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_fill_color
+styleable CircleIndicator ci_animator ci_animator_reverse ci_drawable ci_drawable_unselected ci_gravity ci_height ci_margin ci_orientation ci_width
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha

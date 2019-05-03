@@ -1,48 +1,64 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
 import com.loopj.android.http.*;
+import com.spark.submitbutton.SubmitButton;
+
 import cz.msebera.android.httpclient.Header;
 
 public class Registrar_pro extends AppCompatActivity {
 
     private TextInputEditText etNombre, etDescripcion, etCalificacion, etPrecio, etImagen ;
-    private Button btnAlmacenar;
+    private SubmitButton btnAlmacenar2;
     private AsyncHttpClient cliente;
 
 
 
-
-    @Override
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_pro);
+
+
 
         etNombre = (TextInputEditText) findViewById(R.id.etNombre);
         etDescripcion = (TextInputEditText) findViewById(R.id.etDescripcion);
         etCalificacion = (TextInputEditText) findViewById(R.id.etCalificacion);
         etPrecio = (TextInputEditText) findViewById(R.id.etPrecio);
         etImagen = (TextInputEditText) findViewById(R.id.etImagen);
-
-        btnAlmacenar = (Button) findViewById(R.id.btnAlmacenar);
+        btnAlmacenar2 = (SubmitButton) findViewById(R.id.btnAlmacenar2);
 
 
         cliente = new AsyncHttpClient();
 
-        botonAlmacenar();
 
-
+        botonAlmacenar2();
 
     }
 
+    // Implementacion volver en layout
+    // Inicio
+    private void setSupportActionBar (Toolbar toolbar) {
 
-    private void botonAlmacenar(){
-        btnAlmacenar.setOnClickListener(new View.OnClickListener() {
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+   }
+    //Fin
+
+
+    // Inicio
+
+
+    private void botonAlmacenar2(){
+        btnAlmacenar2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (etNombre.getText().toString().isEmpty() || etDescripcion.getText().toString().isEmpty() || etCalificacion.getText().toString().isEmpty() ||
@@ -90,6 +106,9 @@ public class Registrar_pro extends AppCompatActivity {
                     etImagen.setText("");
                     etPrecio.setText("");
                     etCalificacion.setText("");
+
+                    Intent miIntent = new Intent( Registrar_pro.this, Catalogo.class);
+                    startActivity(miIntent);
                 }
 
             }

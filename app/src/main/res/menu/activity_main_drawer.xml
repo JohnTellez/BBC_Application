@@ -5,33 +5,43 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_inicio"
             android:icon="@drawable/ic_home_black_24dp"
-            android:title="Home" />
+            android:title="Inicio" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_manage"
+            android:id="@+id/nav_reg_prod"
+            android:icon="@drawable/registrar_producto"
             android:title="Registrar Producto" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Consultar Producto" />
+            android:id="@+id/nav_catalogo"
+            android:icon="@drawable/catalogo"
+            android:title="Catalogo" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@android:drawable/ic_lock_idle_lock"
-            android:title="Iniciar sesion" />
+            android:id="@+id/nav_cupones"
+            android:icon="@drawable/cupones"
+            android:title="Ofertas" />
+
+        <item
+            android:id="@+id/nav_merchan"
+            android:icon="@drawable/merchandising"
+            android:title="Merchandising" />
+
+        <item
+            android:id="@+id/nav_sucursales"
+            android:icon="@drawable/sucursales"
+            android:title="Sucursales" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Configuración">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_iniciarsesion"
+                android:icon="@drawable/iniciarsesion"
+                android:title="Iniciar Sesion" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_about"
+                android:icon="@drawable/sobrelaapp"
+                android:title="Acerca de la app" />
         </menu>
     </item>
 

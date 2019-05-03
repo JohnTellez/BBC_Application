@@ -17,6 +17,18 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 import com.bumptech.glide.Glide;
 import com.varunest.sparkbutton.SparkButton;
 
@@ -24,10 +36,19 @@ import com.varunest.sparkbutton.SparkButton;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static final Integer[] XMEN= {R.drawable.bbc1,R.drawable.bbc2,R.drawable.bbc3,R.drawable.bbc4,R.drawable.bbc5,R.drawable.bbc6,R.drawable.bbc7};
+
+    private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
+
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,14 +78,14 @@ public class MainActivity extends AppCompatActivity
             e.printStackTrace();
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Reemplace con su propia acción", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         // Boton Catalogo
         SparkButton button = (SparkButton) findViewById(R.id.catalogobtn);
@@ -98,11 +119,37 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
-
     }
+
+    private void init() {
+        for(int i=0;i<XMEN.length;i++)
+            XMENArray.add(XMEN[i]);
+
+        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager.setAdapter(new MyAdapter(MainActivity.this,XMENArray));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == XMEN.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 3000, 3000);
+    }
+
+
 
 
 
@@ -146,38 +193,75 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_inicio) {
 
             switch (id) {
-                case R.id.nav_gallery: {
+                case R.id.nav_inicio: {
+                    startActivity(new Intent(MainActivity.this, MainActivity.class));
+                }
+            }
+
+
+        } else if (id == R.id.nav_reg_prod) {
+
+            switch (id) {
+                case R.id.nav_reg_prod: {
                     startActivity(new Intent(MainActivity.this, Registrar_pro.class));
                 }
             }
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_catalogo) {
 
             switch (id) {
-                case R.id.nav_slideshow: {
+                case R.id.nav_catalogo: {
                     startActivity(new Intent(MainActivity.this, Catalogo.class));
                 }
             }
+        } else if (id == R.id.nav_cupones) {
+            switch (id) {
+                case R.id.nav_cupones: {
 
-        } else if (id == R.id.nav_manage) {
+                    Toast.makeText(getApplicationContext(),"Modulo en construcción", Toast.LENGTH_SHORT).show();
+                    // startActivity(new Intent(MainActivity.this, MainActivity.class)); // Falta Implementar
+
+                }
+            }
+
+        } else if (id == R.id.nav_merchan) {
 
             switch (id) {
-                case R.id.nav_manage: {
-                    startActivity(new Intent(MainActivity.this, Inicio.class));
+                case R.id.nav_merchan: {
+
+                    Toast.makeText(getApplicationContext(),"Modulo en construcción", Toast.LENGTH_SHORT).show();
+                    //startActivity(new Intent(MainActivity.this, MainActivity.class)); // Falta Implementar
                 }
             }
 
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_sucursales) {
+            switch (id) {
+                case R.id.nav_sucursales: {
 
-        } else if (id == R.id.nav_send) {
+                    Toast.makeText(getApplicationContext(),"Modulo en construcción", Toast.LENGTH_SHORT).show();
+                    //startActivity(new Intent(MainActivity.this, MainActivity.class)); // Falta Implementar
+                }
+            }
 
+        } else if (id == R.id.nav_iniciarsesion) {
+                switch (id) {
+                    case R.id.nav_iniciarsesion: {
+                        startActivity(new Intent(MainActivity.this, Inicio.class));
+                    }
+                }
+
+        } else if (id == R.id.nav_about) {
+                switch (id) {
+                    case R.id.nav_about: {
+
+                        Toast.makeText(getApplicationContext(),"Modulo en construcción", Toast.LENGTH_SHORT).show();
+                        //startActivity(new Intent(MainActivity.this, MainActivity.class)); // Falta Implementar
+                    }
+                }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -185,3 +269,5 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 }
+
+

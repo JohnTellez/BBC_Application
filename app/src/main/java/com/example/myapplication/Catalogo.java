@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toolbar;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -49,6 +50,16 @@ public class Catalogo extends AppCompatActivity {
         //to display it in recyclerview
         loadProducts();
     }
+
+    // Implementacion volver en layout
+    // Inicio
+    private void setSupportActionBar (Toolbar toolbar) {
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    //Fin
 
     private void loadProducts() {
 

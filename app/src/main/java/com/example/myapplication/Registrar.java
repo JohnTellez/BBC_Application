@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -98,6 +99,16 @@ public class Registrar extends AppCompatActivity{
             }
         });
     }
+
+    // Implementacion volver en layout
+    // Inicio
+    private void setSupportActionBar (Toolbar toolbar) {
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    //Fin
 
     private void Registrar() {
 

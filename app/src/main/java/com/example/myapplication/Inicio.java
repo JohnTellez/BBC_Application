@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toolbar;
 
 import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
@@ -25,5 +26,15 @@ public class Inicio extends AppCompatActivity  {
         });
 
     }
+
+    // Implementacion volver en layout
+    // Inicio
+    private void setSupportActionBar (Toolbar toolbar) {
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+    //Fin
 
 }
